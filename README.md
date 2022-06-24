@@ -67,6 +67,16 @@ Javascript Object Notation - how we structure data in JS.
 
 https://www.w3schools.com/js/js_json_intro.asp
 
+### Git
+Intro to git
+
+https://git-scm.com/docs/gittutorial
+
+Also worth noting, you should 'clone' the repository (this project) onto your computer. Run the following command from the parent directory you want the project to live in. (I would suggest ~/code)
+`git clone git@github.com:matthewbillienyc/tamim-fullstack.git`
+
+Then from `~/code` directory, run `cd tamim-fullstack` and `code .` to open the project in VSCode.
+
 
 
 More to come!
