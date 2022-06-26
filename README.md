@@ -6,7 +6,7 @@ Repository for all resources for Tamim during Fullstack Academy and interviewing
 ### XCode
 XCode is Apple's developer kit, needed by many libraries.
 
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+https://developer.apple.com/download/all/?q=xcode%208.2
 
 ### Homebrew
 Homebrew is a framework for installing tools / libraries / languages easily.
