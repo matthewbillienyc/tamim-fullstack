@@ -34,6 +34,15 @@ From root project directoy:
 
 function numberOfYearsToSurpass(startingPopulation, percentGrowth, additionalNewResidents, populationToSurpass) {
     // Your code here
+    let numberOfYears = 0;
+    let newPopulation = startingPopulation;
+    while (newPopulation <= populationToSurpass){
+        const convertedPercent = percentGrowth / 100; 
+        const naturalGrowth = newPopulation * convertedPercent;
+        newPopulation = newPopulation + naturalGrowth + additionalNewResidents;
+        numberOfYears += 1; 
+    }
+    return numberOfYears;
 }
 
 const testCases = [
@@ -55,13 +64,23 @@ const testCases = [
         ],
         expectedResult: 15
     },
+    {
+        arguments: [
+            1000,
+            2,
+            50,
+            999,
+        ],
+        expectedResult: 0
+    },
 ]
+
 
 testCases.forEach(({ arguments, expectedResult }, index) => {
     const result = numberOfYearsToSurpass(...arguments)
     if (result === expectedResult) {
         console.log(`TEST CASE ${index + 1} PASSED`)
     } else {
-        console.log(`TEST CASE ${index + 1} FAILED`)
+        console.log(`TEST CASE ${index + 1} FAILED, expected result; ${expectedResult} actual result; ${result}`)
     }
 })
