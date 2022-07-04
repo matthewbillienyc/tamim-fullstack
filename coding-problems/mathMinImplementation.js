@@ -1,5 +1,5 @@
 /*
-Code your own custom implementation of Math.min
+Code your own custom implementation of Math.min (do not use Math module or Array.sort)
 
 For this implementation you can assume the input array will be positive integers, with a length of at least 1
 */
