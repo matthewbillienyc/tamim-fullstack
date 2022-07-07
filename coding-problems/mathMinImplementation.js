@@ -6,6 +6,13 @@ For this implementation you can assume the input array will be positive integers
 
 const findLowestNumber = inputArray => {
     // Your code here
+    let lowest = inputArray[0];
+    for(var i = 1; i < inputArray.length; i++){
+        if(inputArray[i] < lowest){
+            lowest = inputArray[i];
+        }
+    }
+    return lowest;
 };
 
 const testCases = [
@@ -37,3 +44,4 @@ testCases.forEach(({ arguments, expectedResult }, index) => {
         console.log(`TEST CASE ${index + 1} FAILED, expected result; ${expectedResult} actual result; ${result}`)
     }
 });
+
