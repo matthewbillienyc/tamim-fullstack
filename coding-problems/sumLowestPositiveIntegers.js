@@ -8,12 +8,34 @@ For example, when an array is passed like [19, 5, 42, 2, 77], the output should 
 
 function sumLowestPositiveIntegers(arr) {
     // Your code here
-    let first = Math.min(...arr);
-    arr.splice(arr.indexOf(first), 1);
-    let second = Math.min(...arr);
-    return first + second;
+    let lowest;
+    let secondLowest;
+    for (let i = 0; i < arr.length; i += 1) {
+        if (!lowest) {
+            const firstItem = arr[i];
+            const secondItem = arr[i + 1];
+            if (firstItem < secondItem) {
+                lowest = firstItem;
+                secondLowest = secondItem;
+            } else {
+                secondLowest = firstItem;
+                lowest = secondItem;
+            }
+        } 
+        
+        if (i > 1) {
+            const item = arr[i];
+            if (item < lowest) {
+                secondLowest = lowest;
+                lowest = item;
+                
+            } else if (item < secondLowest) {
+                secondLowest = item;
+            }
+        }
 
-
+    }
+    return lowest + secondLowest;
 
 }
 
