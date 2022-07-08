@@ -10,33 +10,29 @@ function sumLowestPositiveIntegers(arr) {
     // Your code here
     let lowest;
     let secondLowest;
-    for (let i = 0; i < arr.length; i += 1) {
-        if (!lowest) {
-            const firstItem = arr[i];
-            const secondItem = arr[i + 1];
-            if (firstItem < secondItem) {
-                lowest = firstItem;
-                secondLowest = secondItem;
-            } else {
-                secondLowest = firstItem;
-                lowest = secondItem;
-            }
-        } 
-        
-        if (i > 1) {
-            const item = arr[i];
-            if (item < lowest) {
-                secondLowest = lowest;
-                lowest = item;
-                
-            } else if (item < secondLowest) {
-                secondLowest = item;
-            }
-        }
 
+    const firstItem = arr[0];
+    const secondItem = arr[1];
+
+    if (firstItem < secondItem) {
+        lowest = firstItem;
+        secondLowest = secondItem;
+    } else {
+        secondLowest = firstItem;
+        lowest = secondItem;
+    }
+
+    for (let i = 2; i < arr.length; i += 1) {
+        const item = arr[i];
+        if (item < lowest) {
+            secondLowest = lowest;
+            lowest = item;
+            
+        } else if (item < secondLowest) {
+            secondLowest = item;
+        }
     }
     return lowest + secondLowest;
-
 }
 
 const testCases = [
@@ -57,6 +53,12 @@ const testCases = [
             [17, 19, 2, 207, 54],
         ],
         expectedResult: 19,
+    },
+    {
+        arguments: [
+            [33, 33, 33, 24, 100, 500, 2],
+        ],
+        expectedResult: 26,
     },
 ];
 
