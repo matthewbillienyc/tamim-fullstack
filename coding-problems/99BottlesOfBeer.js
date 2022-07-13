@@ -30,14 +30,18 @@ const bottlesOfBeer = () => {
     let bottles;
     let noBottles;
     for( i = 100; i >= 1; i--){
-        if(i == 1){
-            console.log('No more bottles of beer on the wall no more bottles of beer.')
-            console.log('Go to the store and buy some more, 99 bottles of beer on the wall.')
+         if (i == 1){
+            let bottles = 'bottle';
+            console.log(`1 ${bottles} of beer on the wall, 1 ${bottles} of beer.\n`);
+            console.log('Take one down and pass it around, 1 bottle of beer on the wall.\n');
+            console.log('No more bottles of beer on the wall no more bottles of beer.\n')
+            console.log('Go to the store and buy some more, 99 bottles of beer on the wall.\n')
+            
         } else{
             noBottles = i - 1;
 
-        console.log(`${noBottles} bottles of beer on the wall, ${noBottles} bottles of beer.`);
-        console.log(`Take one down and pass it around, ${noBottles} bottles of beer on the wall.`);
+        console.log(`${noBottles} bottles of beer on the wall, ${noBottles} bottles of beer.\n`);
+        console.log(`Take one down and pass it around, ${noBottles} bottles of beer on the wall.\n`);
         }
     }
 }
