@@ -7,17 +7,7 @@ NOTE: modulo operator + parseInt
 */
 
 
-const divisibleByThree = integer => {
-    let parsedInt = parseInt(integer);
-    if (parsedInt % 3 === 0){
-        return true;
-    } else{
-        return false;
-    }
-    
-    
-  
-}
+const divisibleByThree = integer => integer % 3 === 0;
 
 const testCases = [
     {
