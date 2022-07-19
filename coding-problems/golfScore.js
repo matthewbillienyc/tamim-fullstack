@@ -14,7 +14,15 @@ Complete the function which accepts two strings and calculates the golf score of
 // GOAL: use a single iteration over 18 characters
 
 const golfScore = (parValues, scoreValues) => {
-    // Your code here
+    
+    let parScore = 0;
+    let totScore = 0;
+    for(let i = 1; i < 18; i += 1){
+        parScore += parseInt(parValues[i]);
+        totScore += parseInt(scoreValues[i]);
+        console.log(parScore, totScore);
+    }
+    return totScore - parScore;
 };
 
 const testCases = [
