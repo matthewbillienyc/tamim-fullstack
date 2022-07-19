@@ -8,7 +8,15 @@ NOTE: modulo operator + parseInt
 
 
 const divisibleByThree = integer => {
-    // Your code here
+    let parsedInt = parseInt(integer);
+    if (parsedInt % 3 === 0){
+        return true;
+    } else{
+        return false;
+    }
+    
+    
+  
 }
 
 const testCases = [
