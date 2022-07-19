@@ -44,13 +44,19 @@ https://stackoverflow.com/questions/16505559/how-can-i-use-modulo-operator-in-ja
 
 
 
-const 
-fizzBuzz = number 
-=> {
-
-// Your code here
+const fizzBuzz = number => {
+    if (number % 3 === 0 && number % 5 === 0) {
+        return 'FizzBuzz';
+    } else if (number % 3 === 0) {
+        return 'Fizz'
+    } else if (number % 5 === 0) {
+        return 'Buzz'
+    }
 
 }
+
+
+
 
 
 
@@ -117,17 +123,25 @@ getRange([3,3,3,3,4]) -> [3,4]
 
 
 const 
-getRange = numbers 
-=> {
+getRange = numbers => {
+    let lowest = numbers[0];
+    let highest = numbers[1];
+    for (i = 1; i < numbers.length; i++){
+        if(numbers[i] < lowest){
+           lowest = numbers[i]; 
+        } else if(numbers[i] > highest){
+            higest = numbers[i];
+        }
 
-// Your code here
+        }
+        return lowest, highest;
+    }
+    
 
-}
 
 
 
-const 
-getRangeTestCases = [{
+const getRangeTestCases = [{
 
 input: [1,2,3],
 expected: [1,3]},
@@ -210,14 +224,19 @@ LIFTOFF!
 
 
 
-const 
-countdown = start 
-=> {
+const countdown = start => {
+    start = 'this is a test';
+    for (i = 10; i >= 1; i--) {
+        if(i = 1){
+            console.log('LIFTOFF!');
+        } else{
+            start = i - 1;
+            console.log();
+        }
+        
 
-// Your code here
+    }
 
 }
-
-
 
 console.log(countdown(10));
