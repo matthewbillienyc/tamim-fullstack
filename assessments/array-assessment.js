@@ -15,24 +15,30 @@ arrayOfStrings.forEach(item => console.log(item));
 // 2.
 // For arrayOfNumbers, return a new array where the values are multiplied by 10
 // expected output: [50, 40, 30...]
-
+console.log(arrayOfNumbers.map(number => {
+    return number * 10
+}));
 
 // 3.
 // Find all of the values in arrayOfNumbers that are > 5
-
+console.log(arrayOfNumbers.filter(number => number > 5));
 
 // 4.
 // Sort arrayOfStrings alphabetically
-
+console.log(arrayOfStrings.sort());
 
 // 5.
 // Find the first string in arrayOfStrings with length of 3
-
+console.log(arrayOfStrings.find(word => word.length === 3))
 
 // 6.
 // Remove the last element from arrayOfNumbers
+console.log(arrayOfNumbers.pop(-1));
 
+// 6b.
+// Access the last element
+console.log(arrayOfNumbers[-1]);
 
 // 7.
 // Remove the first element from arrayOfNumbers
-
+console.log(arrayOfNumbers.shift());
