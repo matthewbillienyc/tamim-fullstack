@@ -35,10 +35,10 @@ const saveUsers = users => {
     users.forEach(user => {
         const args = []
         HEADERS.forEach((header, index) => {
-            args.push(index)
+            args.push(user[index])
         })
-        const user = new User(...args)
-        user.save()
+        const userObj = new User(...args)
+        userObj.save()
     })
 }
 
@@ -50,4 +50,4 @@ const exampleUsers = [
     ['tamim@gmail.com', 'tamim', '36', 'male'],
 ]
 
-console.log(saveUsers)
+console.log(saveUsers(exampleUsers))
